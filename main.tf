@@ -9,3 +9,7 @@ resource "aws_instance" "JenTFInst" {
 
   tags = { Name = "JenTFInst"}
 }
+
+output "public_ip" {
+    value= aws_instance.JenTFInst.public_ip
+}
